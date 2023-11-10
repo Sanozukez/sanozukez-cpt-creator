@@ -1,0 +1,183 @@
+/* Estilo geral */
+
+/* Tamanho de texto padrão */
+p, span {
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.notice {
+    margin-top: 0;
+}
+
+/* Tamanho de texto menor */
+.small-text {
+    font-size: 10px;
+}
+
+/* Estilo de link padrão */
+a {
+    color: #0073aa; /* Azul padrão do WordPress */
+    text-decoration: none;
+}
+
+/* Estilo de link em hover */
+a:hover {
+    color: #005688; /* Azul mais escuro em hover */
+}
+
+pre{
+    text-align: left;
+}
+
+.mt-0{
+    top: 0;
+    margin-top: 0;
+}
+
+.mb-0{
+    bottom: 0;
+    margin-bottom: 0;
+}
+
+.mt-5{
+    margin-top: 2em !important;
+}
+
+.mb-5{
+    margin-bottom: 2em !important;
+}
+
+.mt-3{
+    margin-top: 1em !important;
+}
+
+.mb-3{
+    margin-bottom: 1em !important;
+}
+
+.bg-light{
+    background: #ececec;
+}
+
+.bg-lwhite{
+    background: #f5f5f5;
+}
+
+.bt, .bb{
+    border: 0;
+    border-top: 1px solid #dcdcde;    
+}
+
+/**
+* form
+*
+*/
+.sn-form-table{
+    vertical-align: top;
+    text-align: left;
+    padding: 20px 10px 20px 0;
+    width: 368px;
+    line-height: 1.3;
+    font-weight: 600
+}
+
+.custom-table {    
+    max-width: 470px;
+    width: 100%;
+    margin: 1px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #4074a5;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.custom-table th,
+.custom-table td {
+    padding: 8px;
+    flex: 1;
+    text-align: start;
+    font-weight: normal;
+}
+
+.custom-table tr{
+    display: flex;
+}
+
+.custom-table td{
+    text-align: end;
+}
+
+.custom-table td.checkbox-td{
+    text-align: start !important;
+}
+
+.custom-table tbody{
+    display: flex;
+    flex-direction: column;
+}
+
+.th-btn-h{
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+select {
+    min-width: 177px;
+}
+
+.custom-table input, .custom-table select{
+    border: 1px solid #dcdcde;
+}
+
+/**
+* botão padrão
+*
+*/
+
+/* Estilo do botão */
+.btn-primary {
+    display: inline-block;
+    font-weight: 300;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    background-color: #4074a5;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Estilo do botão no hover */
+.btn-primary:hover {
+    background-color: #589fe2;
+    color: #fff;
+}
+
+/* Estilo do botão quando pressionado */
+.btn-primary:active {
+    background-color: #589fe2;
+    color: #fff;
+}
+
+/* Estilo do botão desativado */
+.btn-primary:disabled {
+    background-color: #b3b3b3;
+    color: #fff;
+    cursor: not-allowed;
+}
+
+/* Estilo do botão quando desativado e no hover */
+.btn-primary:disabled:hover {
+    background-color: #b3b3b3;
+    color: #fff;
+}

@@ -1,0 +1,510 @@
+<!--cpt-form.html-->
+
+<div class="wrap">
+    <form id="cpt-form">
+        <h1 class="mt-3">Snzkz CPT+</h1>
+        <h2 class="mt-3">Criar Custom Post Types</h2>
+        <table class="custom-table" role="presentation">
+            <tbody>
+                <caption>Labels Obrigatórias</caption>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-slug">Slug do Tipo de Post:</label>
+                    </th>
+                    <td>
+                        <input type="text" id="cpt-slug" name="cpt-slug" maxlength="20" required
+                            pattern="[a-zA-Z0-9\-_]+">
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-admin-bar">Tipo de Post Singular:</label>
+                    </th>
+                    <td>
+                        <input type="text" id="cpt-admin-bar" name="cpt-admin-bar" maxlength="20" required
+                            pattern="[a-zA-Z0-9\s\-_]+">
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="pt-menu-name">Tipo de Post Plural:</label>
+                    </th>
+                    <td>
+                        <input type="text" id="cpt-menu-name" name="pt-menu-name" maxlength="20" required
+                            pattern="[a-zA-Z0-9\s\-_]+">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="th-btn-h">
+                        <button type="button" id="auto-fill" class="btn-primary">Preencher Campos
+                            Automaticamente</button>
+                        <button type="button" id="clear-fields" class="btn-primary">Limpar Campos</button>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="custom-table mt-3" role="presentation">
+            <tbody>
+                <caption>Labels Opcionais</caption>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-archives">Nome do Arquivo:</label>
+                    </th>
+                    <td>
+                        <input type="text" id="cpt-archives" name="cpt-archives" maxlength="20" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-attributes">Atributos do Item:</label>
+                    </th>
+                    <td>
+                        <input type="text" id="cpt-attributes" name="cpt-attributes" maxlength="20" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-parent-item">Item Pai:</label>
+                    </th>
+                    <td>
+                        <input type="text" id="cpt-parent-item" name="cpt-parent-item" maxlength="20" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-all-items">Todos os Itens:</label>
+                    </th>
+                    <td>
+                        <input type="text" id="cpt-all-items" name="cpt-all-items" maxlength="20" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-add-new-item">Adicionar Novo Item:</label>
+                    </th>
+                    <td>
+                        <input type="text" id="cpt-add-new-item" name="cpt-add-new-item" maxlength="20" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-add-new">Adicionar Novo:</label>
+                    </th>
+                    <td>
+                        <input type="text" id="cpt-add-new" name="cpt-add-new" maxlength="20" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-new-item">Novo Item:</label>
+                    </th>
+                    <td>
+                        <input type="text" id="cpt-new-item" name="cpt-new-item" maxlength="20" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-edit-item">Editar Item:</label>
+                    </th>
+                    <td>
+                        <input type="text" id="cpt-edit-item" name="cpt-edit-item" maxlength="20" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-update-item">Atualizar Item:</label>
+                    </th>
+                    <td>
+                        <input type="text" id="cpt-update-item" name="cpt-update-item" maxlength="20" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-view-item">Ver Item:</label>
+                    </th>
+                    <td>
+                        <input type="text" id="cpt-view-item" name="cpt-view-item" maxlength="20" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-view-items">Ver Itens:</label>
+                    </th>
+                    <td>
+                        <input type="text" id="cpt-view-items" name="cpt-view-items" maxlength="20" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-search-items">Buscar Itens:</label>
+                    </th>
+                    <td>
+                        <input type="text" id="cpt-search-items" name="cpt-search-items" maxlength="20" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-not-found">Nenhum Item Encontrado:</label>
+                    </th>
+                    <td>
+                        <input type="text" id="cpt-not-found" name="cpt-not-found" maxlength="20" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-not-found-in-trash">Nenhum Item Encontrado na Lixeira:</label>
+                    </th>
+                    <td>
+                        <input type="text" id="cpt-not-found-in-trash" name="cpt-not-found-in-trash" maxlength="20"
+                            required>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-featured-image">Imagem em Destaque:</label>
+                    </th>
+                    <td>
+                        <input type="text" id="cpt-featured-image" name="cpt-featured-image" maxlength="20" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-set-featured-image">Definir Imagem em Destaque:</label>
+                    </th>
+                    <td>
+                        <input type="text" id="cpt-set-featured-image" name="cpt-set-featured-image" maxlength="20"
+                            required>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-remove-featured-image">Remover Imagem em Destaque:</label>
+                    </th>
+                    <td>
+                        <input type="text" id="cpt-remove-featured-image" name="cpt-remove-featured-image"
+                            maxlength="20" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-use-featured-image">Usar como Imagem em Destaque:</label>
+                    </th>
+                    <td>
+                        <input type="text" id="cpt-use-featured-image" name="cpt-use-featured-image" maxlength="20"
+                            required>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-insert-into-item">Inserir no Item:</label>
+                    </th>
+                    <td>
+                        <input type="text" id="cpt-insert-into-item" name="cpt-insert-into-item" maxlength="20"
+                            required>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-uploaded-to-this-item">Enviado para Este Item:</label>
+                    </th>
+                    <td>
+                        <input type="text" id="cpt-uploaded-to-this-item" name="cpt-uploaded-to-this-item"
+                            maxlength="20" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-items-list">Lista de Itens:</label>
+                    </th>
+                    <td>
+                        <input type="text" id="cpt-items-list" name="cpt-items-list" maxlength="20" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-items-list-navigation">Navegação da Lista de Itens:</label>
+                    </th>
+                    <td>
+                        <input type="text" id="cpt-items-list-navigation" name="cpt-items-list-navigation"
+                            maxlength="20" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-filter-items-list">Filtrar Lista de Itens:</label>
+                    </th>
+                    <td>
+                        <input type="text" id="cpt-filter-items-list" name="cpt-filter-items-list" maxlength="20"
+                            required>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- ARGUMENTOS PARA CRIAÇÃO -->
+        <table class="custom-table mt-3" role="presentation">
+            <tbody>
+                <caption>Array Args</caption>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-description">Descrição:</label>
+                    </th>
+                    <td>
+                        <textarea id="cpt-description" name="cpt-description" rows="4" cols="50"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-public">Público:</label>
+                    </th>
+                    <td>
+                        <select id="cpt-public" name="cpt-public">
+                            <option value="true">Sim</option>
+                            <option value="false">Não</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-exclude-from-search">Excluir da Pesquisa:</label>
+                    </th>
+                    <td>
+                        <select id="cpt-exclude-from-search" name="cpt-exclude-from-search">
+                            <option value="false">Não</option>
+                            <option value="true">Sim</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-publicly-queryable">Publicamente Consultável:</label>
+                    </th>
+                    <td>
+                        <select id="cpt-publicly-queryable" name="cpt-publicly-queryable">
+                            <option value="true">Sim</option>
+                            <option value="false">Não</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-show-ui">Mostrar Interface de Administração:</label>
+                    </th>
+                    <td>
+                        <select id="cpt-show-ui" name="cpt-show-ui">
+                            <option value="true">Sim</option>
+                            <option value="false">Não</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-show-in-nav-menus">Mostrar na criação de Menus :</label>
+                    </th>
+                    <td>
+                        <select id="cpt-show-in-nav-menus" name="cpt-show-in-nav-menus">
+                            <option value="true">Sim</option>
+                            <option value="false">Não</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <p class="mt-0">Pode ser vinculado a um menu de navegação padrão criado no WordPress.</p>
+                        <hr>
+                    </th>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-show-in-menu">Mostrar no Menu:</label>
+                    </th>
+                    <td>
+                        <select id="cpt-show-in-menu" name="cpt-show-in-menu">
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <p class="mt-0">Padrão para mostrar como um menu de posts comum.<br>
+                            Caso o tipo seja um sub-tipo selecione o tipo ascendente na lista. <br>
+                            Lembre-se de mudar <b>hierárquico</b> para <b>sim</b> caso escolha um tipo de post
+                            ascendente.
+                        </p>
+                        <hr>
+                    </th>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-query-var">Variável de Consulta (Query Var):</label>
+                    </th>
+                    <td>
+                        <select id="cpt-query-var" name="cpt-query-var">
+                            <option value="true">Sim</option>
+                            <option value="false">Não</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-rewrite">Permitir Reescrita (rewrite):</label>
+                    </th>
+                    <td>
+                        <select id="cpt-rewrite" name="cpt-rewrite">
+                            <option value="true">Sim</option>
+                            <option value="false">Não</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-capability-type">Tipo de Capacidade:</label>
+                    </th>
+                    <td>
+                        <input type="text" id="cpt-capability-type" name="cpt-capability-type" value="post" />
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-has-archive">Tem Arquivo:</label>
+                    </th>
+                    <td>
+                        <select id="cpt-has-archive" name="cpt-has-archive">
+                            <option value="true">Sim</option>
+                            <option value="false">Não</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-hierarchical">Hierárquico:</label>
+                    </th>
+                    <td>
+                        <select id="cpt-hierarchical" name="cpt-hierarchical">
+                            <option value="false">Não</option>
+                            <option value="true">Sim</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-menu-position">Posição no Menu:</label>
+                    </th>
+                    <td>
+                        <input type="number" id="cpt-menu-position" name="cpt-menu-position" value="9" />
+                    </td>
+                </tr>
+                <tr class="bt">
+                    <th scope="row">
+                        <label for="cpt-menu-icon">Ícone do Menu:</label>
+                    </th>
+                    <td>
+                        <input type="text" id="cpt-menu-icon" name="cpt-menu-icon" placeholder="dashicons-embed-post" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <p class="mt-0">acesse <a
+                                href="https://developer.wordpress.org/resource/dashicons/">https://developer.wordpress.org/resource/dashicons/</a>
+                            e escolha a opção que deseja usar no menu. Copie o nome do icone "dashicon-*"" e cole aqui.
+                        </p>
+                        <hr>
+                    </th>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-supports">Suporte a:</label>
+                    </th>
+                    <td class="checkbox-td">
+                        <input type="checkbox" id="cpt-supports-title" name="cpt-supports[]" value="title" checked />
+                        <label for="cpt-supports-title">Título</label><br />
+
+                        <input type="checkbox" id="cpt-supports-editor" name="cpt-supports[]" value="editor" checked />
+                        <label for="cpt-supports-editor">Editor</label><br />
+
+                        <input type="checkbox" id="cpt-supports-author" name="cpt-supports[]" value="author" checked />
+                        <label for="cpt-supports-author">Autor</label><br />
+
+                        <input type="checkbox" id="cpt-supports-thumbnail" name="cpt-supports[]" value="thumbnail"
+                            checked />
+                        <label for="cpt-supports-thumbnail">Thumbnail (Imagem Destacada)</label><br />
+
+                        <input type="checkbox" id="cpt-supports-excerpt" name="cpt-supports[]" value="excerpt"
+                            checked />
+                        <label for="cpt-supports-excerpt">Resumo</label><br />
+
+                        <input type="checkbox" id="cpt-supports-trackbacks" name="cpt-supports[]" value="trackbacks" />
+                        <label for="cpt-supports-trackbacks">Trackbacks</label><br />
+
+                        <input type="checkbox" id="cpt-supports-custom-fields" name="cpt-supports[]"
+                            value="custom-fields" checked />
+                        <label for="cpt-supports-custom-fields">Campos Personalizados</label><br />
+
+                        <input type="checkbox" id="cpt-supports-comments" name="cpt-supports[]" value="comments" />
+                        <label for="cpt-supports-comments">Comentários</label><br />
+
+                        <input type="checkbox" id="cpt-supports-revisions" name="cpt-supports[]" value="revisions" />
+                        <label for="cpt-supports-revisions">Revisões</label><br />
+
+                        <input type="checkbox" id="cpt-supports-page-attributes" name="cpt-supports[]"
+                            value="page-attributes" />
+                        <label for="cpt-supports-page-attributes">Atributos de Página</label><br />
+
+                        <input type="checkbox" id="cpt-supports-post-formats" name="cpt-supports[]"
+                            value="post-formats" />
+                        <label for="cpt-supports-post-formats">Formatos de Postagem</label><br />
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="cpt-taxonomies">Taxonomias:</label>
+                    </th>
+                    <td class="checkbox-td">
+                        <input type="checkbox" id="cpt-taxonomies-category" name="cpt-taxonomies[]" value="category"
+                            checked />
+                        <label for="cpt-taxonomies-category">Categoria</label><br />
+
+                        <input type="checkbox" id="cpt-taxonomies-post_tag" name="cpt-taxonomies[]" value="post_tag"
+                            checked />
+                        <label for="cpt-taxonomies-post_tag">Tag</label><br />
+                    </td>
+                </tr>
+                <tr class="bt">
+                    <th scope="row">
+                        <label for="cpt-show-in-rest">Mostrar na API REST:</label>
+                    </th>
+                    <td>
+                        <select id="cpt-show-in-rest" name="cpt-show-in-rest">
+                            <option value="true">Sim</option>
+                            <option value="false">Não</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="bt">
+                    <th class="th-btn-h">
+                        <button type="button" id="create-cpt" class="btn-primary">Criar Tipo de Post</button>
+                        <button type="button" id="cpt-preview-code" class="btn-primary">Preview PHP</button>
+                        <button type="button" id="cpt-clear-code" class="btn-primary">Limpar PHP</button>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+        
+        <table class="custom-table bg-light mt-3">
+            <tbody>
+                <caption>Preview do código</caption>
+                <tr>
+                    <th>
+                        <div id="preview-code-result">
+                            <script src="<?php echo plugin_dir_url(__FILE__) . 'js/preview-cpt.js'; ?>"></script>
+                        </div>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+        <p class="mb-0">Campo utilizado para fins de desenvolvimento e depuração</p>
+        <input type="text" id="ajax-url" value="<?php echo admin_url('admin-ajax.php'); ?>" readonly>
+        <p class="mt-0">URL de Destino da Solicitação AJAX:</p>
+    </form>
+</div>
+<script id="my-plugin-script" data-ajax-url="<?php echo admin_url('admin-ajax.php'); ?>"
+    src="<?php echo plugins_url('sanozukez-cpt-creator/js/form-handler.js'); ?>"></script>
